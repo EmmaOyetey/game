@@ -13,6 +13,17 @@ import './style.scss'
 //    optional display album cover when correct or revealed
 //
 
+//Melody Maestro
+//Rhythm Riddle
+//Beat Detective
+//Tune Teaser
+//Sound Sleuth
+//Song Sorcerer
+//Note Ninja
+//Groove Guru
+//Harmony Hunter
+//Lyric Legend
+
 
 //might be easier to have multiple inputs guess 1, ,2 ,3, 4, 5
 
