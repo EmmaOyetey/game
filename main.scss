@@ -1,9 +1,10 @@
 @use "./src/style.scss";
 
-.body {
+body {
     margin: 0;
+    padding: 2em;
     display: flex;
-    place-items: center;
+    flex-direction: row;
+    justify-content: space-around;
     min-width: 320px;
-    min-height: 100vh;
   }

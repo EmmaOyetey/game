@@ -18,36 +18,50 @@
   <body>
     <script type="module" src="/src/main.ts"></script>
     
-    <h1>Tune Tzr</h1>   
+    <h1 class = "gameName">Tune Tzr</h1>   
 
     <div id="app">
       
        <div class = image-container>
-           <p>Image will go here - boombox?!</p>
-           <img src="" alt="">
+           <p>Prepare Note Ninja / Beat Detective</p>
+         <!--  <img src="" alt="">   -->
        </div>
 
        <div class = "playButton-Container">
-        <button class = "button passButton">Play</button>
+        <button class = "button playButton">
+          <i class="fa-regular fa-circle-play"></i>
+          <i class="fa-solid fa-play"></i>
+          <i class="fa-solid fa-headphones"></i>
+          <i class="fa-solid fa-music"></i>
+          Play</button>
        </div>
 
+
        <div class ="audioAndTimer-container">
-           <p>count down timer will go here</p> <!--prob not p but placeholder-->
+           <p><i class="fa-regular fa-hourglass"></i>
+            count down timer will go here
+          </p> <!--prob not p but placeholder-->
        </div>
 
        <div class ="guessInput-Container">
-           
-           <label for="guess guess__1">Take Your First Guess</label>
+           <label for="guess guess__1">
+            <i class="fa-solid fa-question"></i>
+            <i class="fa-regular fa-lightbulb"></i>
+            <i class="fa-solid fa-lightbulb"></i>
+            Take Your First Guess
+          </label>
            <input type="text" id="guessOne" placeholder = "band/artist?">
-           <button class = "button passButton">Pass</button>
+           <button class = "button passButton">
+            <i class="fa-solid fa-forward"></i>
+            Pass
+          </button>
            <button class = "button submitGuessButton">Submit Guess</button>
-
        </div>
 
 
 
        <div class = "output-Container">
-           <div class="output" id="winLoseDisplayResult"></div>
+           <div class="output" id="winLoseDisplayResult"><i class="fa-solid fa-user-ninja"></i></div>
        </div>
 
 

@@ -60,3 +60,8 @@ import './style.scss'
 
 // if pass 
         // skip checkiscorrect follow steps for not correct.
+
+      const playButton = document.querySelector<HTMLButtonElement>(".playButton");
+      const passButton = document.querySelector<HTMLButtonElement>(".passButton");
+      const submitButton = document.querySelector<HTMLButtonElement>(".submitGuessButton");
+
