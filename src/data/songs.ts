@@ -1,4 +1,4 @@
-import {songInfo} from "./types";
+import {songInfo} from "./songTypes";
 
 export const songArray : songInfo[] = [
 
