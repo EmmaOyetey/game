@@ -61,7 +61,51 @@ import './style.scss'
 // if pass 
         // skip checkiscorrect follow steps for not correct.
 
-      const playButton = document.querySelector<HTMLButtonElement>(".playButton");
+      const playAudioButton = document.querySelector<HTMLButtonElement>(".playButton");
       const passButton = document.querySelector<HTMLButtonElement>(".passButton");
       const submitButton = document.querySelector<HTMLButtonElement>(".submitGuessButton");
+
+      const resultDisplay = document.getElementById("resultDisplay");
+      const albumDisplay = document.getElementById("albumInfoDisplay");
+
+      if (
+        !playAudioButton ||
+        !passButton ||
+        !submitButton
+      ){
+        throw new Error ("issue with buttons");
+      }
+
+      if(
+        !resultDisplay ||
+        !albumDisplay
+      ){
+        throw new Error ("issue with digit button")
+      }
+
+
+      const handlePlayAudio =(): void => {
+ //    get the audion click from the data set and 
+ //    play length dependant on the number of guesses made
+ //    pass the numberOfGuesses as a parameter into the function.
+//     need to set types declare key name and type
+         };
+    
+
+//      playAudioButton.addEventListener("click", handlePlayAudio);
+//
+//      
+//      const getThisGuess: string = (guess:string)  => {
+  //type AudioClip = HTMLAudioElement;
+
+  // Declare a variable of type AudioClip
+  //let myAudio: AudioClip;
+  
+  // Assign an audio element to the variable
+  //myAudio = new Audio('path/to/audio/file.mp3');
+  
+  // Play the audio
+  //myAudio.play();
+//     };
+
 
