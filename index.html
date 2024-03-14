@@ -3,11 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+      <!--<link rel="icon" type="image/svg+xml" href="/images/boomBox.png" /> -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tune-tTzr</title>
+    <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://kit.fontawesome.com/78713bd25c.js"
+      crossorigin="anonymous"
+    ></script>
+    
   </head>
+
+
   <body>
-    <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
-  </body>
+    
+    <h1>Tune Tzr</h1>   
+
+    <div id="app">
+      
+       <div class = image-container>
+           <p>Image will go here - boombox?!</p>
+           <img src="" alt="">
+       </div>
+
+       <div class = "playButton-Container">
+        <button class = "button passButton">Play</button>
+       </div>
+
+       <div class ="audioAndTimer-container">
+           <p>count down timer will go here</p> <!--prob not p but placeholder-->
+       </div>
+
+       <div class ="guessInput-Container">
+           
+           <label for="guess guess__1">Take Your First Guess</label>
+           <input type="text" id="guessOne" placeholder = "band/artist?">
+           <button class = "button passButton">Pass</button>
+           <button class = "button submitGuessButton">Submit Guess</button>
+
+       </div>
+
+
+
+       <div class = "output-Container">
+           <div class="output" id="winLoseDisplayResult"></div>
+       </div>
+
+
+       <script type="module" src="/src/main.ts"></script>
+   </div>
+
+ </body>
 </html>
+
+
+
