@@ -1,4 +1,5 @@
-import './style.scss'
+import './style.scss';
+import {songArray} from "./data/songs";
 
 //add a play button 
 //input button
