@@ -1,78 +1,21 @@
 import './style.scss';
 import {songArray} from "./data/songs";
-
-//add a play button 
-//input button
-//image  - boombox?!
-//header - quiz name
-//p tags info on how to ??? - optional
-//data set artistInfo type 
-//    artist string
-//    audio string?? audio file - will package cut this or will i need a 
-//    could add album : string & release date :string
-//    optional counter or barn to run as music plays
-//    optional display album cover when correct or revealed
-//
-
-//Melody Maestro
-//Rhythm Riddle
-//Beat Detective
-//Tune Teaser
-//Sound Sleuth
-//Song Sorcerer
-//Note Ninja
-//Groove Guru
-//Harmony Hunter
-//Lyric Legend
+import {generateRandomSongById} from "./call-back-functions";
 
 
-//might be easier to have multiple inputs guess 1, ,2 ,3, 4, 5
-
-///---------------------------------------------------------
-//guess counter = 1//
-//Player initiates Game by 
-//hitting play button
-// if guess = 1 play 5 seconds of Audio
-// if guess = 2 play 5+5 seconds of audio
-// if guess = 3 play 5+5+5+5 seconds of audion
-// if guess = 4 play 5+5+5+5+5+5 seconds of audio
-
-//player invited to guess artist or Pass
-
-//if guess 
-    //
- // check if is correct? 
-      //let iscorrect=false
-      //let counter =guess 1
-
-      //get thisGuess (typed user input)
-      //covert case to lower
-      // check if thisguess = answer 
-          
-          //if thisguess matches answer - hooray you win! option to play the whole Song fireworks
-          //reset guess counter =0
-      
-          //else if thisguess is not correct) 
-            //if counter <5 
-              //let user know this guess isincorrect. clear thisguess ? or show 2nd guess input - might be easier?!
-              //invite them to hear more and guess again
-              //set guess counter = 1+1=2
-            //else let user know they didnt win this time bteer luck next show. 
-
-// if pass 
-        // skip checkiscorrect follow steps for not correct.
-
+      const startNewGameButton = document.querySelector<HTMLButtonElement>(".NewGameButton");
       const playAudioButton = document.querySelector<HTMLButtonElement>(".playButton");
       const passButton = document.querySelector<HTMLButtonElement>(".passButton");
-      const submitButton = document.querySelector<HTMLButtonElement>(".submitGuessButton");
+      const submitGuessButton = document.querySelector<HTMLButtonElement>(".submitGuessButton");
 
       const resultDisplay = document.getElementById("resultDisplay");
       const albumDisplay = document.getElementById("albumInfoDisplay");
 
       if (
+        !startNewGameButton ||
         !playAudioButton ||
         !passButton ||
-        !submitButton
+        !submitGuessButton
       ){
         throw new Error ("issue with buttons");
       }
@@ -84,8 +27,61 @@ import {songArray} from "./data/songs";
         throw new Error ("issue with digit button")
       }
 
+//const startNewGame =  (thisSong)
+ generateRandomSongById;
 
-      const handlePlayAudio =(): void => {
+  
+const handleThisGame = (): void => {
+ 
+  playAudioButton.addEventListener("click", handleAudio);
+
+  const handleAudio = () =>
+
+      const handlethisAttempt = () => {
+          let thisAttempt:number =1;
+          let isCorrect:boolean = false;
+
+          passButton.addEventListener("click", handlePass);
+          submitGuessButton.addEventListener("click", handleGuess);
+
+          const handlePass = (): void => {
+            if (thisAttempt <4) { 
+              thisAttempt = thisAttempt+1;
+              handleTryAgain
+            } else if (thisAttempt =4) {
+              handleLoser
+            }
+          }
+
+          const handleGuess = () : void => {
+            const inputElement =document.getElementById<HTMLInputElement>("guess");
+            const thisGuess = inputElement?.ariaValueMax?.toLowerCase();
+            const isCorrect = thisSong.artist === thisGuess;
+            if (isCorrect) {
+              handleWinner;
+            } else if (!isCorrect && (thisAttempt<4)) {
+              thisAttempt = thisAttempt+1;
+              handleTryAgain
+                }else { 
+                  handleLoser
+                }
+            }
+            }
+          }
+
+          const handleTryAgain = resultDisplay.textContent = "Tune you in you need another go"; 
+          const handleLoser = resultDisplay.textContent = "Not this time. play a new game to hone your note ninja skills";
+          const handleWinner = resultDisplay.textContent = "WINNER! WINNER CHICKEN DINNER";
+      }
+}
+
+
+startNewGameButton.addEventListener("click", handleThisGame);
+
+
+//const startThisGame = (thisSong)
+//play
+  //    const handlePlayAudio =(): void => {
  //    get the audion click from the data set and 
  //    play length dependant on the number of guesses made
  //    pass the numberOfGuesses as a parameter into the function.
