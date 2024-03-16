@@ -2,7 +2,7 @@ import {songInfo} from "./songTypes";
 
 export const songArray : songInfo[] = [
 
- {  id: 1,
+ {  id: 0,
     songForToday: true,
     albumName: "3 Feet High and Rising",
     songTitle: "Tread Water",
@@ -10,9 +10,10 @@ export const songArray : songInfo[] = [
     releaseDate : "1989",
     genre: ["Hip Hop",],
     playlist: ["waiheke", "oyetey", "today"],
-    audio : [],
+    audio:[""
+],
  },
- {  id: 2,
+ {  id: 1,
     songForToday: true,
     albumName: "Raw Like Sushi",
     songTitle: "Buffalo Stance",
@@ -20,7 +21,9 @@ export const songArray : songInfo[] = [
     releaseDate : "1988",
     genre: ["Electronic", "Hip Hop", "Funk", "Soul",],
     playlist: ["waiheke", "oyetey", "today"],
-    audio:[],
+    audio:["./src/audio/TaylorSwift-Shake-it-off-1",
+           "./src/audio/TaylorSwift-Shake-it-off-fullsong,"
+    ],
  },
 
 ]

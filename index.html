@@ -20,6 +20,9 @@
     
     <h1 class = "gameName">Tune Tzr</h1>   
 
+    <button class = "button newGameButton">Start Game!</button>
+
+
     <div id="app">
       
        <div class = image-container>
@@ -27,9 +30,7 @@
          <!--  <img src="" alt="">   -->
        </div>
 
-       <div class = new-game>
-        <button class = "button newGameButton"></button>
-       </div>
+
 
        <div class = "playButton-Container">
         <button class = "button playButton">
@@ -67,8 +68,12 @@
        <div class = "output-Container">
            <div class="output" id="resultDisplay"><i class="fa-solid fa-user-ninja"></i></div>
            <div class="output" id="albumInfoDisplay"><i class="fa-solid fa-user-ninja"></i></div>
-          </div>
+           
+        </div>
 
+      <div class = "audio-container">
+        <audio id="audio" src="./src/audio/TaylorSwift-Shake-it-off-fullsong.mp3"></audio>
+      </div>  
 
        <script type="module" src="/src/main.ts"></script>
    </div>

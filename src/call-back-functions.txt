@@ -1,0 +1,161 @@
+import {songInfo} from "./data/songTypes";
+
+
+
+export const generateRandomSongById = (songArray: songInfo[]) => {
+    const randomID: number = Math.floor(Math.random()* songArray.length);
+    const thisSong = songArray.find(song => song.id === randomID);
+    };
+    return thisSong ;
+    
+;
+// Check if a song with the randomID was found
+if (thisSong) {
+    console.log("this Song:", thisSong);
+} else {
+    console.log("Song not found for ID:", randomID);
+}
+
+
+const handleAudio (thisSong: songInfo): void => {
+   
+    const thisSongsAudioArray = thisSong.audio;
+    if (thisSongsAudioArray.length > 0) {
+        // Access the first audio clip (assuming it's a URL string)
+        const firstAudioClip = thisSongsAudioArray[0];
+        const secondAudioClip = thisSongsAudioArray[1];
+        const thirdAudioClip = thisSongsAudioArray[2];
+        const fourthAudioClip = thisSongsAudioArray[3];
+        const fullAudioClip = thisSongsAudioArray[4];
+
+        // Play the audio clip (replace this with your actual audio playback method)
+        playAudioClip(firstAudioClip);
+    } else {
+        console.log("No audio clips found for the song.");
+    }
+
+    return  firstAudioClip, secondAudioClip,thirdAudioClip, fourthAudioClip, fullAudioClip; 
+}
+
+// Example function for playing audio clip (replace this with your actual audio playback method)
+function playAudioClip(audioClipUrl: string): void {
+    console.log("Playing audio clip:", audioClipUrl);
+    // Add your audio playback logic here
+}
+
+// Example usage:
+// Assuming randomSong is the SongInfo object obtained using the method from the previous answer
+handleAudio(thisSong);
+
+
+
+
+
+
+
+
+export const handlePass = (thisAttempt: number): number => {
+    if (thisAttempt <4) { 
+        thisAttempt = thisAttempt+1;
+        handleTryAgain();
+    } else {
+            handleLoser()
+          }
+    return thisAttempt;
+};  
+
+export  const handleThisGuess = (thisAttempt: number, thisSong : songInfo) : number => {
+    const inputElement =document.getElementById<HTMLInputElement>("guess");
+    const thisGuess = inputElement.value.toLowerCase();
+    const isCorrect = thisSong.artist === thisGuess;
+      if (isCorrect) {
+          handleWinner();
+      } else if (!isCorrect && (thisAttempt<4)) {
+                  thisAttempt = thisAttempt+1;
+                  handleTryAgain ();
+                }else { 
+                    handleLoser ();
+                  }
+    return thisAttempt;
+};
+
+
+// Declare a variable of type AudioCliplet myAudio: AudioClip;
+
+
+const handleAudio = (thisSong.audio[])
+songAudio = new Audio();// Assign an audio element to the variable
+songAudio.currentTime = 0
+songAudio.play()
+
+// Example function to get a specific audio clip from a specific song
+
+
+export const handleLoser () => {
+    resultDisplay.textContent = "Not this time. play a new game to hone your note ninja skills";
+    };
+export const handleWinner () => {
+    resultDisplay.textContent = "WINNER! WINNER CHICKEN DINNER";
+    };
+
+export const handleTryAgain = resultDisplay.textContent = "Tune you in you need another go"; 
+
+
+
+
+const filterList = () => {
+  console.log(input.value);
+  filteredPokemon = pokemonArray.filter((pokemon) => {
+    return (
+      pokemon.name.includes(input.value) || pokemon.types.includes(input.value)
+    );
+  });
+
+
+      const randomID: number = Math.floor(Math.random()* songArray.length);
+      const thisSong = songArray.find(song => song.id === randomID);
+      console.log("this Song:", thisSong);
+
+let thisSong: songInfo | undefined; // Declare thisSong in the broader scope
+
+const handleThisGame = (): void => {
+    const randomID: number = Math.floor(Math.random() * songArray.length);
+    thisSong = songArray.find(songInfo => songInfo.id === randomID);
+    console.log("this Song:", thisSong);
+};
+
+const handleAttempt1 = (): void => {
+    if (thisSong) { // Check if thisSong is defined
+        audio.innerHTML = `<div class="audioOne">
+            <audio class="audio__one" src="${thisSong.audio[0]}"></audio>
+        </div>`;
+    } else {
+        console.log("No song selected for playback.");
+    }
+};
+
+playAudioButton.addEventListener("click", handleAttempt1);
+startNewGameButton.addEventListener("click", handleThisGame);
+
+const handleAttempt1 = (): void => {
+    if (thisSong) {
+        const audioElement = document.createElement('audio');
+        audioElement.className = 'audio__one';
+        audioElement.src = thisSong.audio[0];
+        
+        // Append the audio element to the audio container
+        audio.innerHTML = ''; // Clear any existing content
+        audio.appendChild(audioElement);
+    } else {
+        console.log("No song selected for playback.");
+    }
+};
+
+   const handleAttempt1 = (): void => {
+    if (thisSong)
+          { Audio.innerHTML = `<div class = "audioOne">
+           <audio class="audio__one" src=${thisSong.audio[0]}></audio>
+           </div>`;
+           } else {console.log("no song selected for playback");
+          }            
+        };
