@@ -8,12 +8,13 @@ import { songInfo } from './data/songTypes';
 const startNewGameButton = document.querySelector<HTMLButtonElement>(".newGameButton");
 const playAudioButton = document.querySelector<HTMLButtonElement>(".playButton");
 //const passButton = document.querySelector<HTMLButtonElement>(".passButton");
-//const submitGuessButton = document.querySelector<HTMLButtonElement>(".submitGuessButton");
+const submitGuessButton = document.querySelector<HTMLButtonElement>(".submitGuessButton");
 
-//const audio =document.querySelector<HTMLAudioElement>(".audio")
 
-const resultDisplay = document.getElementById("resultDisplay");
-const albumDisplay = document.getElementById("albumInfoDisplay");
+const guessOneInput = document.querySelector<HTMLInputElement>(".guess");
+
+//const resultDisplay = document.getElementById("resultDisplay");
+//const albumDisplay = document.getElementById("albumInfoDisplay");
 
 let thisSong : songInfo | undefined;
 
@@ -27,11 +28,18 @@ let thisSong : songInfo | undefined;
     throw new Error ("issue with buttons");
   };
 
-  if(
-    !resultDisplay || !albumDisplay
+  //if(
+  //  !resultDisplay || !albumDisplay
+  //){
+   // throw new Error ("issue with display")
+  //};
+  if (
+    !submitGuessButton || 
+    !guessOneInput
   ){
-    throw new Error ("issue with digit button")
+      throw new Error ("issue with guess input")
   };
+  
    
   //if(
   //  !audio
@@ -59,18 +67,27 @@ const handleThisGame = () : void => {
         console.log("i'm playing a song!")
         } else {
           console.log("no song selected for playback")
-        }
-          //  { Audio.innerHTML = `<div class = "audioOne">
-          //   <audio class="audio__one" src=${thisSong.audio[0]}></audio>
-           //  </div>`; 
-                        
+        }                
      };
+
+    
+
+     const handleThisGuess = () : void => {
+      const correctAnswer = thisSong?.artist;
+      const thisGuess = guessOneInput.value.trim().toLowerCase();
+      if (thisGuess === correctAnswer?.toLowerCase()) {
+            console.log ("you are a winner");
+        } else  { console.log (" you loser");
+      };
+    }
+  
+
 
 playAudioButton.addEventListener("click", handleAttempt1);   
 startNewGameButton.addEventListener("click", handleThisGame);
 
 //passButton.addEventListener("click", handlePass);
-//submitGuessButton.addEventListener("click", handleGuess);
+submitGuessButton.addEventListener("click", handleThisGuess);
 
 
 

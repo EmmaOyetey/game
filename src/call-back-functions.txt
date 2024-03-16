@@ -103,173 +103,53 @@ export const handleTryAgain = resultDisplay.textContent = "Tune you in you need 
 
 
 
-const filterList = () => {
-  console.log(input.value);
-  filteredPokemon = pokemonArray.filter((pokemon) => {
-    return (
-      pokemon.name.includes(input.value) || pokemon.types.includes(input.value)
-    );
-  });
+HTML:
+
+html
+Copy code
+<input type="text" id="guessInput" placeholder="Enter your guess">
+<button id="submitGuessButton">Submit</button>
+<div id="feedback"></div>
+JavaScript/TypeScript:
+
+const submitGuessButton = document.getElementById("submitGuessButton") as HTMLButtonElement;
 
 
-      const randomID: number = Math.floor(Math.random()* songArray.length);
-      const thisSong = songArray.find(song => song.id === randomID);
-      console.log("this Song:", thisSong);
+const guessInput = document.getElementById("guessInput") as HTMLInputElement;
 
-let thisSong: songInfo | undefined; // Declare thisSong in the broader scope
 
-const handleThisGame = (): void => {
-    const randomID: number = Math.floor(Math.random() * songArray.length);
-    thisSong = songArray.find(songInfo => songInfo.id === randomID);
-    console.log("this Song:", thisSong);
-};
 
-const handleAttempt1 = (): void => {
-    if (thisSong) { // Check if thisSong is defined
-        audio.innerHTML = `<div class="audioOne">
-            <audio class="audio__one" src="${thisSong.audio[0]}"></audio>
-        </div>`;
+
+const feedback = document.getElementById("feedback");
+
+// Correct answer (you can replace this with the actual correct answer)
+const correctAnswer = "Taylor Swift";
+
+submitGuessButton.addEventListener("click", () => {
+    const userGuess = guessInput.value.trim().toLowerCase(); // Get user's guess and normalize it
+    
+    
+    if (userGuess === correctAnswer.toLowerCase()) { // Check if the guess is correct
+        feedback.textContent = "Correct! You guessed it right."; // Provide feedback to the user
+        feedback.classList.remove("incorrect");
+        feedback.classList.add("correct");
     } else {
-        console.log("No song selected for playback.");
+        feedback.textContent = "Incorrect! Try again."; // Provide feedback to the user
+        feedback.classList.remove("correct");
+        feedback.classList.add("incorrect");
     }
-};
-
-playAudioButton.addEventListener("click", handleAttempt1);
-startNewGameButton.addEventListener("click", handleThisGame);
-
-const handleAttempt1 = (): void => {
-    if (thisSong) {
-        const audioElement = document.createElement('audio');
-        audioElement.className = 'audio__one';
-        audioElement.src = thisSong.audio[0];
-        
-        // Append the audio element to the audio container
-        audio.innerHTML = ''; // Clear any existing content
-        audio.appendChild(audioElement);
-    } else {
-        console.log("No song selected for playback.");
-    }
-};
-
-   const handleAttempt1 = (): void => {
-    if (thisSong)
-          { Audio.innerHTML = `<div class = "audioOne">
-           <audio class="audio__one" src=${thisSong.audio[0]}></audio>
-           </div>`;
-           } else {console.log("no song selected for playback");
-          }            
-        };
+});
 
 
-import { songInfo } from "./songTypes";
-
-export const songArray: songInfo[] = [
-    {
-        id: 0,
-        songForToday: true,
-        albumName: "3 Feet High and Rising",
-        songTitle: "Tread Water",
-        artist: "De La Soul",
-        releaseDate: "1989",
-        genre: ["Hip Hop"],
-        playlist: ["waiheke", "oyetey", "today"],
-        audio: [
-            "./audio/TaylorSwift-Shake-it-off-1.5-clip1.mp3",
-            "./audio/TaylorSwift-Shake-it-off-fullsong.mp3"
-        ],
-    },
-    {
-        id: 1,
-        songForToday: true,
-        albumName: "Raw Like Sushi",
-        songTitle: "Buffalo Stance",
-        artist: "Neneh Cherry",
-        releaseDate: "1988",
-        genre: ["Electronic", "Hip Hop", "Funk", "Soul"],
-        playlist: ["waiheke", "oyetey", "today"],
-        audio: [
-            "./audio/TaylorSwift-Shake-it-off-1.5-clip1.mp3",
-            "./audio/TaylorSwift-Shake-it-off-fullsong.mp3"
-        ],
-    },
-];
+onst submitGuessButton = document.getElementById("submitGuessButton") as HTMLButtonElement;
 
 
+const guessInput = document.getElementById("guessInput") as HTMLInputElement;
 
 
+const feedback = document.getElementById("feedback");
 
+// Correct answer (you can replace this with the actual correct answer)
+const correctAnswer = "Taylor Swift";
 
-const handleAttempt1 = (): void => {
-    if (thisSong) {
-        const audioElement = document.createElement('audio');
-        audioElement.className = 'audio__one';
-        audioElement.src = thisSong.audio[0];
-        
-        // Append the audio element to the audio container
-        audio.innerHTML = ''; // Clear any existing content
-        audio.appendChild(audioElement);
-        
-        // Play the audio
-        audioElement.play();
-    } else {
-        console.log("No song selected for playback.");
-    }
-};
-
-// Get reference to the play button
-const playButton = document.querySelector<HTMLButtonElement>(".playButton");
-
-// Function to handle the play button click event
-const handlePlayButtonClick = (): void => {
-    handleAttempt1();
-};
-
-// Add event listener to the play button
-if (playButton) {
-    playButton.addEventListener("click", handlePlayButtonClick);
-}
-
-
-
-import './style.scss';
-import { songArray } from "./data/songs";
-import { songInfo } from './data/songTypes';
-
-const startNewGameButton = document.querySelector<HTMLButtonElement>(".newGameButton");
-const playAudioButton = document.querySelector<HTMLButtonElement>(".playButton");
-
-const resultDisplay = document.getElementById("resultDisplay");
-const albumDisplay = document.getElementById("albumInfoDisplay");
-
-let thisSong: songInfo | undefined; // Declaring thisSong outside the function
-
-if (!startNewGameButton || !playAudioButton) {
-    throw new Error ("Issue with buttons");
-}
-
-if (!resultDisplay || !albumDisplay) {
-    throw new Error ("Issue with digit button");
-}
-
-const handleThisGame = (): void => {
-    const randomID: number = Math.floor(Math.random() * songArray.length);
-    thisSong = songArray.find(songInfo => songInfo.id === randomID);
-    console.log("this Song:", thisSong);
-};
-
-const handleAttempt1 = (): void => {
-    if (thisSong) {
-        const audioElement = document.createElement('audio');
-        audioElement.className = 'audio__one';
-        audioElement.src = thisSong.audio[0];
-        audioElement.innerHTML = "";
-        audioElement.appendChild(audioElement);
-        console.log(thisSong.audio[0]);
-        audioElement.play();
-    } else {
-        console.log("No song selected for playback.");
-    }
-};
-
-playAudioButton.addEventListener("click", handleAttempt1);   
-startNewGameButton.addEventListener("click", handleThisGame);
+submitGuessButton.addEventListener("click", () => {
