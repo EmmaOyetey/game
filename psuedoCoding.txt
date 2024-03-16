@@ -152,3 +152,33 @@ export const generateRandomSongById = (songArray: songInfo[]) =>{
   // Play the audio
   //myAudio.play();
 //     };
+
+const handleAttempt1 = (): void => {
+    if (thisSong) {
+        const audioElement = document.createElement('audio');
+        audioElement.className = 'audio__one';
+        audioElement.src = thisSong.audio[0];
+        
+        // Append the audio element to the audio container
+        audio.innerHTML = ''; // Clear any existing content
+        audio.appendChild(audioElement);
+        
+        // Play the audio
+        audioElement.play();
+    } else {
+        console.log("No song selected for playback.");
+    }
+};
+
+// Get reference to the play button
+const playButton = document.querySelector<HTMLButtonElement>(".playButton");
+
+// Function to handle the play button click event
+const handlePlayButtonClick = (): void => {
+    handleAttempt1();
+};
+
+// Add event listener to the play button
+if (playButton) {
+    playButton.addEventListener("click", handlePlayButtonClick);
+}

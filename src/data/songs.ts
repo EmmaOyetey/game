@@ -1,4 +1,4 @@
-import {songInfo} from "./songTypes";
+import { songInfo } from "./songTypes";
 
 export const songArray : songInfo[] = [
 
@@ -10,8 +10,7 @@ export const songArray : songInfo[] = [
     releaseDate : "1989",
     genre: ["Hip Hop",],
     playlist: ["waiheke", "oyetey", "today"],
-    audio:[""
-],
+    audio: ["./src/audio/TS-clip1.mp3", "./src/audio/TS-fullsong.mp3"]
  },
  {  id: 1,
     songForToday: true,
@@ -21,9 +20,7 @@ export const songArray : songInfo[] = [
     releaseDate : "1988",
     genre: ["Electronic", "Hip Hop", "Funk", "Soul",],
     playlist: ["waiheke", "oyetey", "today"],
-    audio:["./src/audio/TaylorSwift-Shake-it-off-1",
-           "./src/audio/TaylorSwift-Shake-it-off-fullsong,"
-    ],
+    audio: ["./src/audio/TS-clip1.mp3", "./src/audio/TS-fullsong.mp3"]
  },
 
-]
+];

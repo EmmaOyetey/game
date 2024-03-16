@@ -20,8 +20,7 @@ let thisSong : songInfo | undefined;
 
 
   if (
-    !startNewGameButton ||
-    !playAudioButton 
+    !startNewGameButton || !playAudioButton 
  //   !passButton ||
  //   !submitGuessButton
   ){
@@ -29,8 +28,7 @@ let thisSong : songInfo | undefined;
   };
 
   if(
-    !resultDisplay ||
-    !albumDisplay
+    !resultDisplay || !albumDisplay
   ){
     throw new Error ("issue with digit button")
   };
@@ -46,21 +44,25 @@ let thisSong : songInfo | undefined;
 const handleThisGame = () : void => {
 
       const randomID: number = Math.floor(Math.random()* songArray.length);
-      const thisSong = songArray.find(songInfo => songInfo.id === randomID);
+      thisSong = songArray.find(songInfo => songInfo.id === randomID);
       console.log("this Song:", thisSong);
       
    };    
 
+   
     const handleAttempt1 = (): void => {
-      if (thisSong) {
-        const audioElement = document.createElement('audio');
+        if (thisSong) {
+          const audioElement = document.createElement('audio');
         audioElement.className = 'audio__one';
         audioElement.src = thisSong.audio[0];
-        } else {console.log("no song selected for playback");
-            } 
+        audioElement.play()
+        console.log("i'm playing a song!")
+        } else {
+          console.log("no song selected for playback")
+        }
           //  { Audio.innerHTML = `<div class = "audioOne">
           //   <audio class="audio__one" src=${thisSong.audio[0]}></audio>
-           //  </div>`;
+           //  </div>`; 
                         
      };
 
