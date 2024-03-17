@@ -9,9 +9,7 @@ const startNewGameButton = document.querySelector<HTMLButtonElement>(".newGameBu
 const playAudioButton = document.querySelector<HTMLButtonElement>(".playButton");
 //const passButton = document.querySelector<HTMLButtonElement>(".passButton");
 const submitGuessButton = document.querySelector<HTMLButtonElement>(".submitGuessButton");
-
-
-const guessOneInput = document.querySelector<HTMLInputElement>(".guess");
+const guessOneInput = document.querySelector<HTMLInputElement>("#guess");
 
 //const resultDisplay = document.getElementById("resultDisplay");
 //const albumDisplay = document.getElementById("albumInfoDisplay");
@@ -63,8 +61,8 @@ const handleThisGame = () : void => {
           const audioElement = document.createElement('audio');
         audioElement.className = 'audio__one';
         audioElement.src = thisSong.audio[0];
-        audioElement.play()
-        console.log("i'm playing a song!")
+        audioElement.play();
+        console.log("i'm playing a song!" + thisSong.artist)
         } else {
           console.log("no song selected for playback")
         }                
@@ -73,13 +71,19 @@ const handleThisGame = () : void => {
     
 
      const handleThisGuess = () : void => {
-      const correctAnswer = thisSong?.artist;
-      const thisGuess = guessOneInput.value.trim().toLowerCase();
-      if (thisGuess === correctAnswer?.toLowerCase()) {
-            console.log ("you are a winner");
-        } else  { console.log (" you loser");
-      };
-    }
+      if(thisSong){
+        const correctAnswer = thisSong.artist;
+        console.log( "the correct Answer is" + correctAnswer + "your guess is " + thisSong.artist)
+        const thisGuess = guessOneInput.value.trim().toLowerCase();
+        if (thisGuess === correctAnswer?.toLowerCase()) {
+        console.log ("you are a winner. it is " + thisSong.artist );
+        } else  { console.log (" you loser it is ");
+        };
+      } else {
+        console.log("no song for playback")
+      }
+
+    };
   
 
 
