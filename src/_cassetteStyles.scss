@@ -1,0 +1,106 @@
+#app {
+    max-width: 1000px;
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    background-color: rgb(244, 241, 226);
+    border-radius:30px;
+    border: 2px solid black;
+  }
+
+  .image-container {
+    background-image: url("/images/favourite\ cassette\ full\ size.jpg"), 
+    linear-gradient(to bottom right , rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    //background-color: transparent; 
+    overflow-x: hidden;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    border-radius:8px;
+  }
+
+  .playButton , .newGameButton {
+    border-radius: 8px;
+    border: 2px solid transparent;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color:rgb(244, 117, 20);
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin-bottom: 0.4em;
+  
+      &:hover {
+      border-color: rgb(88, 63, 63);
+      }
+  }
+
+  .submitGuessButton {
+    border-radius: 8px;
+    border: 2px solid transparent;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color:black;
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin-bottom: 0.4em;
+  
+      &:hover {
+      border-color: rgb(88, 63, 63);
+      }
+  }
+
+    .guessInput-Container {
+        display: flex;
+        flex-direction: column;
+
+          label {
+              display: block;
+              margin-bottom: 10px;
+              font-weight: bold;
+              font-size: 1em;
+              color: black;
+          }
+      
+          input[type="text"] {
+            border-radius: 8px;
+            border: 2px solid transparent;
+            padding-top: 0.4em;
+            padding-bottom: 0.5em;
+            font-size: 0.7em;
+            font-weight: 500;
+            font-family: inherit;
+            background-color:black;
+            color: white;
+            cursor: pointer;
+            transition: border-color 0.25s;
+            margin-bottom: 0.4em;
+            text-align: center;
+      
+              &:focus {
+                  /* Additional styles for when input is focused */
+                  outline: none;
+                  border-color: #007bff;
+              }
+          }
+  }
+
+
+  
+
+
+  

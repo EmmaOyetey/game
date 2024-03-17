@@ -16,33 +16,38 @@
 
 
   <body>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./src/main.ts"></script>
     
-    <h1 class = "gameName">Tune Tzr</h1>   
-
-    <button class = "button newGameButton">Start Game!</button>
 
 
-    <div id="app">
-      
+  <div id="app">
+
+      <div class = "getStartedContainer">
+        <h1 class = "gameName">
+          Tune Teezr
+          <i class="fa-solid fa-headphones"></i>
+        </h1>   
+        
+      </div>
+
        <div class = image-container>
         <!--<p>Prepare Note Ninja / Beat Detective</p>-->   
          <!--  <img src="" alt="">   -->
        </div>
 
+       <div class = newGame-Container>
+        <button class = "button newGameButton">Get a Tune!
+        </button>
+       </div>
 
-
-       <div class = "playButton-Container">
+       <div class = "playAudio-Container">
         <button class = "button playButton">
-          <i class="fa-regular fa-circle-play"></i>
           <i class="fa-solid fa-play"></i>
-          <i class="fa-solid fa-headphones"></i>
           <i class="fa-solid fa-music"></i>
           Play</button>
        </div>
 
-
-       <div class ="audioAndTimer-container">
+       <div class ="Timer-container">
            <p><i class="fa-regular fa-hourglass"></i>
             count down timer will go here
           </p> <!--prob not p but placeholder-->
@@ -50,30 +55,32 @@
 
        <div class ="guessInput-Container">
            <label for="guess guess__1">
-            <i class="fa-solid fa-question"></i>
             <i class="fa-regular fa-lightbulb"></i>
             <i class="fa-solid fa-lightbulb"></i>
-            Type Your Guess Here. To hear more Type Pass!
+            <!--<i class="fa-solid fa-question"></i>--> 
+            Who is the artist/band?!
           </label>
-           <input type="text" id="guess" placeholder = "band/artist? Enter your guess">
-           <button class = "button submitGuessButton">Submit Guess</button>
+           <input type="text" 
+              id="guess" 
+              placeholder = "Guess or type pass to hear more">
+           <button class = "button submitGuessButton">
+            Submit Guess..
+            <i class="fa-solid fa-forward"></i>
+          </button>
+      </div>     
+      <!--
            <button class = "button passButton">
             <i class="fa-solid fa-forward"></i>
             Pass
           </button>
-           
-       </div>
+           -->
 
-
-
-       <div class = "output-Container">
-           <div class="output" id="resultDisplay"><i class="fa-solid fa-user-ninja"></i></div>
-           <div class="output" id="albumInfoDisplay"><i class="fa-solid fa-user-ninja"></i></div>
-           
-        </div>
-
-       <script type="module" src="/src/main.ts"></script>
-   </div>
+      <div class = "output-Container">
+        <div class="output" id="resultDisplay"><i class="fa-solid fa-user-ninja"></i></div>
+        <div class="output" id="albumInfoDisplay"><i class="fa-solid fa-user-ninja"></i></div>  
+      </div>         
+       
+  </div>
 
  </body>
 </html>

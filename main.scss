@@ -1,10 +1,15 @@
-@use "./src/style.scss";
+@use "./src/style";
+@use "./src/cassetteStyles";
+@use "./src/displayOutputStyles";
+@use "./src/initiateGameStyles";
 
 body {
     margin: 0;
-    padding: 2em;
+    padding: 1.5em;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: flex-start;
     min-width: 320px;
+    min-height : 100vh;
   }
+

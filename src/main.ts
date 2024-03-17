@@ -1,4 +1,4 @@
-import './style.scss';
+import './_style.scss';
 import { songArray } from "./data/songs";
 import { songInfo } from './data/songTypes';
 
@@ -11,7 +11,7 @@ const playAudioButton = document.querySelector<HTMLButtonElement>(".playButton")
 const submitGuessButton = document.querySelector<HTMLButtonElement>(".submitGuessButton");
 const guessOneInput = document.querySelector<HTMLInputElement>("#guess");
 
-//const resultDisplay = document.getElementById("resultDisplay");
+const resultDisplay = document.getElementById("resultDisplay");
 //const albumDisplay = document.getElementById("albumInfoDisplay");
 
 let thisSong : songInfo | undefined;
@@ -26,11 +26,11 @@ let thisSong : songInfo | undefined;
     throw new Error ("issue with buttons");
   };
 
-  //if(
-  //  !resultDisplay || !albumDisplay
-  //){
-   // throw new Error ("issue with display")
-  //};
+  if(
+  !resultDisplay 
+  ){
+  throw new Error ("issue with display")
+  };
   if (
     !submitGuessButton || 
     !guessOneInput
@@ -77,7 +77,10 @@ const handleThisGame = () : void => {
         const thisGuess = guessOneInput.value.trim().toLowerCase();
         if (thisGuess === correctAnswer?.toLowerCase()) {
         console.log ("you are a winner. it is " + thisSong.artist );
-        } else  { console.log (" you loser it is ");
+        resultDisplay.textContent = "WINNER! WINNER CHICKEN DINNER";
+        } else  { 
+          console.log (" you loser it is ");
+          resultDisplay.textContent = "Not this time. play a new game to hone your note ninja skills";
         };
       } else {
         console.log("no song for playback")
