@@ -55,7 +55,6 @@ const handleThisGame = () : void => {
       
    };    
 
-   
     const handleAttempt1 = (): void => {
         if (thisSong) {
           const audioElement = document.createElement('audio');
@@ -67,8 +66,6 @@ const handleThisGame = () : void => {
           console.log("no song selected for playback")
         }                
      };
-
-    
 
      const handleThisGuess = () : void => {
       if(thisSong){
