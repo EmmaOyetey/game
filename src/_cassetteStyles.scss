@@ -1,5 +1,6 @@
 #app {
     max-width: 1000px;
+    min-width: 300px;
     margin: 0;
     padding: 1em;
     text-align: center;
@@ -15,12 +16,12 @@
     background-position: center;
     background-blend-mode: overlay;
     overflow-x: hidden;
-    min-height: 150px;
+    min-height: 200px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     font-weight: 500;
-    margin-bottom: 0.5em;
+    margin-bottom: 1.4em;
     border-radius:8px;
   }
 
@@ -30,18 +31,23 @@
     padding-top: 0.2em;
     padding-bottom: 0.2em;
     width: 100%;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 500;
     font-family: inherit;
     background-color:rgb(244, 117, 20);
     cursor: pointer;
     transition: border-color 0.25s;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.9em;
   
       &:hover {
       border-color: rgb(88, 63, 63);
       }
   }
+
+  .timer-container {
+    padding: 0;
+    margin: 0;
+}
 
   .submitGuessButton {
     border-radius: 8px;
@@ -49,7 +55,7 @@
     padding-top: 0.2em;
     padding-bottom: 0.2em;
     width: 100%;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 500;
     font-family: inherit;
     background-color:black;
@@ -80,14 +86,14 @@
             border: 2px solid transparent;
             padding-top: 0.4em;
             padding-bottom: 0.5em;
-            font-size: 0.7em;
+            font-size: 1em;
             font-weight: 500;
             font-family: inherit;
             background-color:black;
             color: white;
             cursor: pointer;
             transition: border-color 0.25s;
-            margin-bottom: 0.4em;
+            margin-bottom: 0.9em;
             text-align: center;
       
               &:focus {
@@ -103,7 +109,7 @@
       justify-content: center;
       align-items: flex-end;
       opacity: 0.2;
-      background-image: "./src/images/testMadonnaImage.png";
+      background-image: "./game.images/testMImage.png ";
       background-size: cover;
       background-position: center;
       overflow-x: hidden;
@@ -112,7 +118,9 @@
       border-radius:8px;
       max-width: 100px;
       max-height: 50px;
-    }
+      background-blend-mode: overlay;
+      background-color: transparent;
+    } 
 
   }
 

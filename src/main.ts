@@ -78,10 +78,12 @@ const handleThisGame = () : void => {
         console.log ("you are a winner. it is " + thisSong.artist );
         resultDisplay.textContent = "WINNER! WINNER CHICKEN DINNER it is " + thisSong.artist;
         albumDisplay.innerHTML = `<div>
-          <h2>You were listening to ${thisSong.songTitle} by ${thisSong.artist}</h2>
-          <p>Album: from ${thisSong.albumName} released on ${thisSong.releaseDate}</p>
+          <p>You were listening to </p>
+          <p>${thisSong.songTitle} </P>
+          <p>by ${thisSong.artist}</p>
+          <p>from the Album "${thisSong.albumName}"</P>
+          <p>released in ${thisSong.releaseDate}</p>
         </div>`;
-        albumDisplay.classList.add('img-container-winner');
         albumDisplay.classList.remove('image-container');
         albumDisplay.classList.add('image-container-winner');
         playAudioButton.style.display = "none";
@@ -107,8 +109,8 @@ const handleThisGame = () : void => {
             <p>Album: ${thisSong.albumName}</p>
             <p>Release Date: ${thisSong.releaseDate}</p>
           </div>`;
+          albumDisplay.style.backgroundImage = "./images/testMImage.png";
           albumDisplay.classList.remove('image-container');
-          albumDisplay.classList.add('image-container-winner');
           playAudioButton.style.display = "none";
           thisAttempt = 0;
             
