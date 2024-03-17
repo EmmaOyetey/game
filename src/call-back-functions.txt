@@ -252,3 +252,41 @@ startNewGameButton.addEventListener("click", handleThisGame);
 
 //passButton.addEventListener("click", handlePass);
 submitGuessButton.addEventListener("click", handleThisGuess);
+
+
+
+    img-container.innerHTML = `<div>
+      <h2>Song: ${thisSong.songTitle}</h2>
+      <p>Artist: ${cthisSong.artist}</p>
+      <p>Album: ${thisSong.albumName}</p>
+      <p>Release Date: ${thisSong.releaseDate}</p>
+      
+    </div>`;
+  
+
+  img-container.classList.add('img-container-highlight');
+;
+
+const handleThisGuess = (): void => {
+    const correctAnswer = thisSong?.artist;
+    const thisGuess = guessOneInput.value.trim().toLowerCase();
+    
+    if (thisGuess === correctAnswer?.toLowerCase()) {
+        console.log("You are a winner. It is " + thisSong.artist);
+        resultDisplay.textContent = "WINNER! WINNER CHICKEN DINNER it is " + thisSong.artist;
+        albumDisplay.innerHTML = `
+            <div>
+                <h2>Song: ${thisSong.songTitle}</h2>
+                <p>Artist: ${thisSong.artist}</p>
+                <p>Album: ${thisSong.albumName}</p>
+                <p>Release Date: ${thisSong.releaseDate}</p>
+            </div>`;
+        albumDisplay.classList.add('img-container-highlight');
+
+        // Hide the playAudioButton
+        playAudioButton.style.display = 'none';
+    } else {
+        console.log("You loser, it is " + correctAnswer);
+        resultDisplay.textContent = "Wrong guess! Try again.";
+    }
+};

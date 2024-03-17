@@ -10,7 +10,12 @@ export const songArray : songInfo[] = [
     releaseDate : "1989",
     genre: ["Hip Hop",],
     playlist: ["waiheke", "oyetey", "today"],
-    audio: []
+    audio: ["./src/audio/TS-clip1.mp3", 
+    "./src/audio/MC-fullsong.mp3",
+    "./src/audio/NC-fullsong.mp3",
+    "./src/audio/Madonna-fullsong.mp3",
+    "./src/audio/prodigy-fullsong.mp3"
+ ]
  },
  {  id: 1,
     songForToday: true,
@@ -20,7 +25,12 @@ export const songArray : songInfo[] = [
     releaseDate : "1988",
     genre: ["Electronic", "Hip Hop", "Funk", "Soul",],
     playlist: ["waiheke", "oyetey", "today"],
-    audio: ["./src/audio/TS-clip1.mp3", "./src/audio/TS-fullsong.mp3"]
+    audio: ["./src/audio/TS-clip1.mp3", 
+    "./src/audio/MC-fullsong.mp3",
+    "./src/audio/NC-fullsong.mp3",
+    "./src/audio/Madonna-fullsong.mp3",
+    "./src/audio/prodigy-fullsong.mp3"
+ ]
  },
  {  id: 2,
    songForToday: true,
@@ -30,7 +40,12 @@ export const songArray : songInfo[] = [
    releaseDate : "2001",
    genre: ["French Indie", "Rock", "R&B", "pop",],
    playlist: ["waiheke", "oyetey", "today"],
-   audio: ["./src/audio/TS-clip1.mp3", "./src/audio/TS-fullsong.mp3"]
+   audio: ["./src/audio/TS-clip1.mp3", 
+   "./src/audio/MC-fullsong.mp3",
+   "./src/audio/NC-fullsong.mp3",
+   "./src/audio/Madonna-fullsong.mp3",
+   "./src/audio/prodigy-fullsong.mp3"
+]
 },
 {  id: 3,
    songForToday: true,
@@ -40,7 +55,12 @@ export const songArray : songInfo[] = [
    releaseDate : "1995",
    genre: ["pop","R&B",],
    playlist: ["waiheke", "oyetey", "today"],
-   audio: ["./src/audio/TS-clip1.mp3", "./src/audio/TS-fullsong.mp3"]
+   audio: ["./src/audio/TS-clip1.mp3", 
+   "./src/audio/MC-fullsong.mp3",
+   "./src/audio/NC-fullsong.mp3",
+   "./src/audio/Madonna-fullsong.mp3",
+   "./src/audio/prodigy-fullsong.mp3"
+]
 },
 {  id: 4,
    songForToday: true,
@@ -50,7 +70,12 @@ export const songArray : songInfo[] = [
    releaseDate : "1996",
    genre: ["dance","electronic",],
    playlist: ["waiheke", "oyetey", "today"],
-   audio: ["./src/audio/TS-clip1.mp3", "./src/audio/TS-fullsong.mp3"]
+   audio: ["./src/audio/TS-clip1.mp3", 
+   "./src/audio/MC-fullsong.mp3",
+   "./src/audio/NC-fullsong.mp3",
+   "./src/audio/Madonna-fullsong.mp3",
+   "./src/audio/prodigy-fullsong.mp3"
+]
 },
 {  id: 5,
    songForToday: true,
@@ -60,7 +85,12 @@ export const songArray : songInfo[] = [
    releaseDate : "1989",
    genre: ["pop",],
    playlist: ["waiheke", "oyetey", "today"],
-   audio: ["./src/audio/TS-clip1.mp3", "./src/audio/TS-fullsong.mp3"]
+   audio: ["./src/audio/TS-clip1.mp3", 
+   "./src/audio/MC-fullsong.mp3",
+   "./src/audio/NC-fullsong.mp3",
+   "./src/audio/Madonna-fullsong.mp3",
+   "./src/audio/prodigy-fullsong.mp3"
+]
 },
 {  id: 5,
    songForToday: true,
@@ -70,7 +100,12 @@ export const songArray : songInfo[] = [
    releaseDate : "2014",
    genre: ["pop", "dance"],
    playlist: ["waiheke", "oyetey", "today"],
-   audio: ["./src/audio/TS-clip1.mp3", "./src/audio/TS-fullsong.mp3"]
+   audio: ["./src/audio/TS-clip1.mp3", 
+   "./src/audio/MC-fullsong.mp3",
+   "./src/audio/NC-fullsong.mp3",
+   "./src/audio/Madonna-fullsong.mp3",
+   "./src/audio/prodigy-fullsong.mp3"
+]
 },
 
 

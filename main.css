@@ -109,6 +109,22 @@ button:focus-visible {
   outline: none;
   border-color: #007bff;
 }
+.guessInput-Container .image-container-winner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  opacity: 0.2;
+  background-image: "./src/images/testMadonnaImage.png";
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  border-radius: 8px;
+  max-width: 100px;
+  max-height: 50px;
+}
 
 .output-container {
   display: flex;

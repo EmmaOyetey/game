@@ -10,12 +10,12 @@ const playAudioButton = document.querySelector<HTMLButtonElement>(".playButton")
 //const passButton = document.querySelector<HTMLButtonElement>(".passButton");
 const submitGuessButton = document.querySelector<HTMLButtonElement>(".submitGuessButton");
 const guessOneInput = document.querySelector<HTMLInputElement>("#guess");
-
+const albumDisplay =document.querySelector<HTMLInputElement>(".image-container");
 const resultDisplay = document.getElementById("resultDisplay");
-//const albumDisplay = document.getElementById("albumInfoDisplay");
+
 
 let thisSong : songInfo | undefined;
-
+let thisAttempt: number = 0;
 
 
   if (
@@ -27,7 +27,7 @@ let thisSong : songInfo | undefined;
   };
 
   if(
-  !resultDisplay 
+  !resultDisplay || !albumDisplay
   ){
   throw new Error ("issue with display")
   };
@@ -52,14 +52,13 @@ const handleThisGame = () : void => {
       const randomID: number = Math.floor(Math.random()* songArray.length);
       thisSong = songArray.find(songInfo => songInfo.id === randomID);
       console.log("this Song:", thisSong);
-      
    };    
 
     const handleAttempt1 = (): void => {
         if (thisSong) {
           const audioElement = document.createElement('audio');
-        audioElement.className = 'audio__one';
-        audioElement.src = thisSong.audio[0];
+        audioElement.className = 'audio';
+        audioElement.src = thisSong.audio[thisAttempt];
         audioElement.play();
         console.log("i'm playing a song!" + thisSong.artist)
         } else {
@@ -69,20 +68,58 @@ const handleThisGame = () : void => {
 
      const handleThisGuess = () : void => {
       if(thisSong){
+
         const correctAnswer = thisSong.artist;
         console.log( "the correct Answer is" + correctAnswer + "your guess is " + thisSong.artist)
         const thisGuess = guessOneInput.value.trim().toLowerCase();
+
+
         if (thisGuess === correctAnswer?.toLowerCase()) {
         console.log ("you are a winner. it is " + thisSong.artist );
-        resultDisplay.textContent = "WINNER! WINNER CHICKEN DINNER";
-        } else  { 
-          console.log (" you loser it is ");
-          resultDisplay.textContent = "Not this time. play a new game to hone your note ninja skills";
-        };
+        resultDisplay.textContent = "WINNER! WINNER CHICKEN DINNER it is " + thisSong.artist;
+        albumDisplay.innerHTML = `<div>
+          <h2>You were listening to ${thisSong.songTitle} by ${thisSong.artist}</h2>
+          <p>Album: from ${thisSong.albumName} released on ${thisSong.releaseDate}</p>
+        </div>`;
+        albumDisplay.classList.add('img-container-winner');
+        albumDisplay.classList.remove('image-container');
+        albumDisplay.classList.add('image-container-winner');
+        playAudioButton.style.display = "none";
+        thisAttempt = 0;
+          
+ 
+
+
+        } else if ((thisGuess !== correctAnswer) && (thisAttempt < 4)) { 
+            console.log("Try again");
+            resultDisplay.textContent = "Nope! Hit play to hear some more";
+            guessOneInput.value = ""; 
+            guessOneInput.placeholder = "Guess again!"; 
+            thisAttempt++;
+
+
+
+          } else if ((thisGuess !== correctAnswer) && (thisAttempt = 4 )) {
+            resultDisplay.textContent = "LOSER! better luck next time"; 
+            albumDisplay.innerHTML = `<div>
+            <h2>Song: ${thisSong.songTitle}</h2>
+            <p>Artist: ${thisSong.artist}</p>
+            <p>Album: ${thisSong.albumName}</p>
+            <p>Release Date: ${thisSong.releaseDate}</p>
+          </div>`;
+          albumDisplay.classList.remove('image-container');
+          albumDisplay.classList.add('image-container-winner');
+          playAudioButton.style.display = "none";
+          thisAttempt = 0;
+            
+
+            } else { console.log("problem handling multiple guesses");
+               };
+
+
       } else {
         console.log("no song for playback")
       }
-
     };
   
 
