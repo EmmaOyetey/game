@@ -4,11 +4,50 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+        .gameName {
+          font-size: 2em;
+          margin-top: 0.1em;
+          margin-bottom: 0;
+          }
+        .gameAim {
+          font-size: 1.2em;
+          text-align: left;
+          padding-left: 0.2;
+          margin: 0.5em;
+          margin-bottom: 0.7em;
+        }
+
 }
 
-  .gameName {
-    font-size: 2em;
-    margin-top: 0.2em;
-    margin-bottom: 0.4em;
+.newGameButton {
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 90%;
+  font-size: 1.6em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color:rgb(244, 117, 20);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-bottom: 0.9em;
+  animation: pulse 5s infinite alternate; /* Apply the pulse animation */
+
+
+    &:hover {
+    border-color: rgb(88, 63, 63);
+    }
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

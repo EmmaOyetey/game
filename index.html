@@ -23,11 +23,13 @@
   <div id="app">
 
       <div class = "getStartedContainer">
-        <h1 class = "gameName">
-          Tune Teezr
-          <i class="fa-solid fa-headphones"></i>
-        </h1>   
-        
+          <h1 class = "gameName">
+            Tune Teezr
+            <i class="fa-solid fa-headphones"></i>
+          </h1>   
+          <p class = "gameAim">
+            How quickly can you guess the <span style="font-weight: bold;">artist</span> from the tune intro?
+          </p>
       </div>
 
        <div class = "image-container" id = "albumInfoDisplay">
@@ -35,38 +37,35 @@
          <!--  <img src="" alt="">   -->
        </div>
 
-       <div class = "newGame-Container">
-        <button class = "button newGameButton">Get a Tune!
-        </button>
-       </div>
-
-       <div class = "playAudio-Container">
+      <button class = "button newGameButton">Get a Tune!
+      </button>
+     
+      <div class = "inGameAudioAndFeedback-container">
         <button class = "button playButton">
           <i class="fa-solid fa-play"></i>
           <i class="fa-solid fa-music"></i>
-          Play</button>
-       </div>
+          Play
+        </button>
+        <div class="feedbackDisplay">
+          <p ><i class="fa-regular fa-hourglass"></i>
+          timer here</p>
+        </div> 
+      </div>
 
-       <div class ="timer-container">
-           <i class="fa-regular fa-hourglass"></i>
-            count down timer will go here
-           <!--prob not p but placeholder-->
-       </div>
-
-       <div class ="guessInput-Container">
-           <label for="guess guess__1">
-            <i class="fa-regular fa-lightbulb"></i>
-            <i class="fa-solid fa-lightbulb"></i>
-            <!--<i class="fa-solid fa-question"></i>--> 
-            Who is the artist/band?!
-          </label>
-           <input type="text" 
-              id="guess" 
-              placeholder = "Guess or type pass to hear more">
-           <button class = "button submitGuessButton">
-            Submit Guess..
-            <i class="fa-solid fa-forward"></i>
-          </button>
+      <div class ="guessInput-Container">
+          <label for="guess">
+          <i class="fa-regular fa-lightbulb"></i>
+          <i class="fa-solid fa-lightbulb"></i>
+          <!--<i class="fa-solid fa-question"></i>--> 
+          Who is the artist/band?!
+        </label>
+          <input type="text" 
+            id="guess" 
+            placeholder = "Guess or type pass to hear more">
+          <button class = "button submitGuessButton">
+          Submit Guess..
+          <i class="fa-solid fa-forward"></i>
+        </button>
       </div>     
       <!--
            <button class = "button passButton">
@@ -74,7 +73,6 @@
             Pass
           </button>
            -->
-
       <div class = "output-Container">
         <div class="output" id="resultDisplay"><i class="fa-solid fa-user-ninja"></i></div>    
       </div>         
