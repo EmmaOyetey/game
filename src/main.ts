@@ -62,7 +62,6 @@ const handleThisGame = () : void => {
       startNewGameButton.style.display = "none";
       inGameAudioAndFeedback.style.display = "flex";
       feedbackDisplay.textContent = "Hit play to get started";
-      feedbackDisplay.style.fontSize = "20px"; 
 
    };    
 
@@ -113,7 +112,6 @@ const handleThisGame = () : void => {
         } else if ((thisGuess !== correctAnswer) && (thisAttempt < 4)) { 
             console.log("Try again");
             feedbackDisplay.textContent = "Nope! Hit play to hear some more";
-            feedbackDisplay.style.fontSize = "20px"; 
             guessInput.value = ""; 
             guessInput.placeholder = "Guess again!"; 
             thisAttempt++;
@@ -127,11 +125,11 @@ const handleThisGame = () : void => {
             <p>Artist: ${thisSong.artist}</p>
             <p>Album: ${thisSong.albumName}</p>
             <p>Release Date: ${thisSong.releaseDate}</p>
-          </div>`;
-          imageDisplay.style.backgroundImage = "./images/testMImage.png";
-          imageDisplay.classList.remove('image-container');
-          playAudioButton.style.display = "none";
-          thisAttempt = 0;
+            </div>`;
+            imageDisplay.style.backgroundImage = "./images/testMImage.png";
+            imageDisplay.classList.remove('image-container');
+            playAudioButton.style.display = "none";
+            thisAttempt = 0;
             
 
             } else { console.log("problem handling multiple guesses");

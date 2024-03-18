@@ -1,5 +1,5 @@
 #app {
-    max-width: 400px;
+    max-width: 300px;
     min-width: 300px;
     max-height: auto;
     margin: 0;
@@ -32,7 +32,7 @@
     display: none;
     justify-content: space-between;
     margin-left: 0.4em;
-    margin-right: 0.2em;
+    margin-right: 0.4em;
     padding: 0.1em;
     margin-bottom: 0.7em;
     
@@ -42,15 +42,14 @@
           flex-direction: column;
           justify-content: flex-end;
           text-align: right;
-          padding: 0.4em;
           font-size: 1.4em;
           font-weight: 500;
-          margin-left: 0.7em;
+       
       
         }
 
         .feedbackDisplay p {
-          margin: 0; /* Remove margin */
+          margin: 0; 
         }
 
         .playButton {
@@ -58,8 +57,11 @@
           border-radius: 50px;
           border: 2px solid transparent;
           background-color:rgb(244, 117, 20);
+          padding-left: 2em;
+          padding-right:2em;
 
-          font-size: 18px;
+
+          font-size: 1em;
           font-weight: 500;
           font-family: inherit;
           
