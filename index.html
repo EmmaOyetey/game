@@ -14,68 +14,85 @@
     
   </head>
 
+ 
 
   <body>
     <script type="module" src="./src/main.ts"></script>
     
-
+ 
 
   <div id="app">
 
-      <div class = "getStartedContainer">
-          <h1 class = "gameName">
-            Tune Teezr
-            <i class="fa-solid fa-headphones"></i>
-          </h1>   
-          <p class = "gameAim">
+        <div class = "controlButtons">
+      <p class = "ninjaButton"><i class="fa-solid fa-user-ninja"></i></p>
+      <p class = "audioPauseButton"><i class="fa-solid fa-stop"></i></p>
+      <p class = "restartButton"><i class="fa-light fa-house"></i></p>
+    </div>  
+
+    <div class =header>
+      
+        <h1 class = "gameName">
+          Tune Teezr
+          <i class="fa-solid fa-headphones"></i>
+        </h1>   
+        
+    </div>
+
+    <div class = "currentStateContainer">
+        <div class ="gameAimIntro">
+          <p class = "intro">
             How quickly can you guess the <span style="font-weight: bold;">artist</span> from the tune intro?
           </p>
-      </div>
+        </div>
+        <div class ="gameOutcomeWinner">
+          <p>
+            WINNER! WINNER CHICKEN DINNER!
+          </p>
+          <img class= "winnerGig" src="./images/pixil-gif-winner.gif" alt="elliots winner gif" srcset="">
+        </div>
+        <div class ="gameOutcomeLoser">
+          <p>
+            Sorry Not this time -LOSER!
+          </p>
+          <!--<img class= "winnerGig" src="./images/pixil-gif-winner.gif" alt="elliots winner gif" srcset="">-->
+        </div>  
 
-       <div class = "image-container" id = "albumInfoDisplay">
-        <!--<p>Prepare Note Ninja / Beat Detective</p>-->   
-         <!--  <img src="" alt="">   -->
-       </div>
+    </div>
 
-      <button class = "button newGameButton">Get a Tune!
-      </button>
+    <div class = "image-container">
+    </div>
+
+    <button class = "button newGameButton">Get a Tune!
+    </button>
      
-      <div class = "inGameAudioAndFeedback-container">
-        <button class = "button playButton">
-          <i class="fa-solid fa-play"></i>
-          <i class="fa-solid fa-music"></i>
-          Play
-        </button>
-        <div class="feedbackDisplay">
-          <p ><i class="fa-regular fa-hourglass"></i>
-          timer here</p>
-        </div> 
-      </div>
+    <div class = "inGameAudioAndFeedback-container">
+      <button class = "button playButton">
+        <i class="fa-solid fa-play"></i>
+        <i class="fa-solid fa-music"></i>
+        Play
+      </button>
+      <div class="feedbackDisplay">
+        <p ><i class="fa-regular fa-hourglass"></i>
+        timer here</p>
+      </div> 
+    </div>
 
-      <div class ="guessInput-Container">
-          <label for="guess">
-          <i class="fa-regular fa-lightbulb"></i>
-          <i class="fa-solid fa-lightbulb"></i>
-          <!--<i class="fa-solid fa-question"></i>--> 
-          Who is the artist/band?!
+    <div class ="guessInput-Container">
+        <label for="guess"> 
+        <i class="fa-solid fa-lightbulb"></i>
+        Guess or Type pass to hear more!
+        <i class="fa-solid fa-lightbulb"></i>
         </label>
-          <input type="text" 
-            id="guess" 
-            placeholder = "Guess or type pass to hear more">
-          <button class = "button submitGuessButton">
-          Submit Guess..
-          <i class="fa-solid fa-forward"></i>
-        </button>
-      </div>     
-      <!--
-           <button class = "button passButton">
-            <i class="fa-solid fa-forward"></i>
-            Pass
-          </button>
-           -->
-      <div class = "output-Container">
-        <div class="output" id="resultDisplay"><i class="fa-solid fa-user-ninja"></i></div>    
-      </div>         
+        <input type="text" 
+          id="guess" 
+          placeholder = "Guess or type pass to hear more">
+        <button class = "button submitGuessButton">
+        Submit Guess..
+        <i class="fa-solid fa-forward"></i>
+      </button>
+    </div>     
+
+     
        
   </div>
 

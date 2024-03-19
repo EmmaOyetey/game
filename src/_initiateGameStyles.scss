@@ -1,29 +1,59 @@
 
 
-.getStartedContainer {
+.controlButtons {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1.2em;
+  background-color: rgb(244, 117, 20);
+  width:100%;
+}
+
+.ninjaButton , .audioPauseButton, .restartButton {
+  border-radius: 50%;
+  border: 2px solid black;
+  padding: 0.3em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  text-align: centre;
+  font-family: inherit;
+  background-color: white;
+  transition: border-color 0.25s;
+  margin: 10px;
+}
+    
+.gameName {
+  font-size: 2em;
+  margin-top: 0.1em;
+  margin-bottom: 0;
+}
+
+.currentStateContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-        .gameName {
-          font-size: 2em;
-          margin-top: 0.1em;
-          margin-bottom: 0;
-          }
-        .gameAim {
-          font-size: 1.2em;
-          text-align: left;
-          padding-left: 0.4;
-          margin: 0.3em;
-          margin-bottom: 0.7em;
-        }
+}
 
+.gameOutcomeWinner, .gameOutcomeLoser {
+  display: none;
+}
+
+.intro {
+  font-size: 1.4em;
+  text-align: center;
+  padding-left: 0.4;
+  margin: 0;
+  margin-bottom: 0.4em;
 }
 
 .newGameButton {
+  display: flex;
+  justify-content: center;
   border-radius: 8px;
   border: 2px solid transparent;
   padding-top: 1em;
   padding-bottom: 1em;
+  margin-left: 0.5em;
   width: 90%;
   font-size: 1.6em;
   font-weight: 500;
@@ -32,22 +62,15 @@
   cursor: pointer;
   transition: border-color 0.25s;
   margin-bottom: 0.9em;
-  animation: pulse 5s infinite alternate; /* Apply the pulse animation */
-
-
-    &:hover {
-    border-color: rgb(88, 63, 63);
-    }
+  animation: pulse 4s infinite alternate; /* Apply the pulse animation */
 }
+
 
 @keyframes pulse {
   0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
+    transform: scale(0.9);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.1);
   }
 }
