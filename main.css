@@ -21,21 +21,6 @@
   flex-direction: column;
 }
 
-.image-container {
-  background-image: url("/images/favourite cassette full size.jpg"), linear-gradient(to bottom right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: overlay;
-  overflow-x: hidden;
-  min-height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  font-weight: 500;
-  margin-bottom: 1em;
-  border-radius: 8px;
-}
-
 .inGameAudioAndFeedback-container {
   display: none;
   justify-content: space-between;
@@ -51,6 +36,7 @@
   text-align: right;
   font-weight: 500;
   font-size: 1.4em;
+  margin-left: 0.3em;
 }
 .inGameAudioAndFeedback-container .feedbackDisplay p {
   margin: 0;
@@ -166,7 +152,7 @@
 }
 
 .controlButtons {
-  display: none;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 1.2em;
@@ -201,6 +187,13 @@
 
 .gameOutcomeWinner, .gameOutcomeLoser {
   display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.winnerGif, loserGif {
+  width: 190px;
+  height: auto;
 }
 
 .intro {
@@ -211,6 +204,21 @@
   margin-bottom: 0.4em;
 }
 
+.image-container {
+  background-image: url("/images/favourite cassette full size.jpg"), linear-gradient(to bottom right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  overflow-x: hidden;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-weight: 500;
+  margin-bottom: 1em;
+  border-radius: 8px;
+}
+
 .newGameButton {
   display: flex;
   justify-content: center;
@@ -218,7 +226,7 @@
   border: 2px solid transparent;
   padding-top: 1em;
   padding-bottom: 1em;
-  margin-left: 0.5em;
+  margin-left: 0.6em;
   width: 90%;
   font-size: 1.6em;
   font-weight: 500;

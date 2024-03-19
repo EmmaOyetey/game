@@ -10,21 +10,6 @@
  
   }
 
-  .image-container {
-    background-image: url("/images/favourite\ cassette\ full\ size.jpg"), 
-    linear-gradient(to bottom right , rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
-    overflow-x: hidden;
-    min-height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    font-weight: 500;
-    margin-bottom: 1em;
-    border-radius:8px;
-  }
 
   .inGameAudioAndFeedback-container{
     display: none;
@@ -41,6 +26,7 @@
           text-align: right;
           font-weight: 500;
           font-size: 1.4em;
+          margin-left: 0.3em;
         }
 
         .feedbackDisplay p {
@@ -142,6 +128,7 @@
     background-blend-mode: overlay;
     overflow-x: hidden;
     max-width: 400px;
+   
 
   }
 
