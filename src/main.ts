@@ -69,7 +69,7 @@ const startNewGame = (): void => {
   thisAttempt = 0;
   const randomID: number = Math.floor(Math.random() * songArray.length);
   thisSong = songArray.find((songInfo) => songInfo.id === randomID);
-  console.log("this Song:", thisSong);
+
   inGameAudioAndFeedbackContainer.style.display = "flex";
   feedbackDisplay.textContent = "Hit play to get started"; 
   startNewGameButton.style.display = "none";
@@ -81,7 +81,7 @@ const startNewGame = (): void => {
         audioElement.play();
         console.log("i'm playing a song!" + thisSong.audio[thisAttempt]);
         } else {
-          throw new Error("no song selected");;
+          throw new Error("no song selected");
         }
       guessInputDisplay.style.display = "flex";
       feedbackDisplay.textContent = "Hear again? Hit Play";
@@ -93,7 +93,6 @@ const startNewGame = (): void => {
         const correctAnswer = thisSong.artist;
         const thisGuess = guessInput.value.trim().toLowerCase();
         thisAttempt += 1;
-        console.log("this is guess" + thisAttempt)
 
         if (thisGuess !== correctAnswer && thisAttempt < 4) {
 
@@ -183,20 +182,6 @@ const startNewGame = (): void => {
 startNewGameButton.addEventListener("click", startNewGame);
 
 
-//const handleReset = (): void => {
-//  stopAudio();
- // audioElement.src = "";
-//  winner.style.display = "none";
-//  loser.style.display = "none";
-//  gameAim.style.display = "flex";
-//  imageDisplay.classList.remove("image-container-winner");
-//  imageDisplay.classList.remove("image-container-loser");
-//  imageDisplay.classList.add("image-container");
-//  imageDisplay.innerHTML = ``;
-//  startNewGameButton.style.display = "flex";
-//  guessInputDisplay.style.display = "none";
-//  inGameAudioAndFeedbackContainer.style.display = "none";
-//};
 
 
 
