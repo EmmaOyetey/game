@@ -96,7 +96,7 @@ const startNewGame = (): void => {
 
         if (thisGuess !== correctAnswer && thisAttempt < 4) {
 
-          audioElement.src = "./src/audio/soundEffects/fail.mp3";
+          audioElement.src = "./public/audio/soundEffects/fail.mp3";
           audioElement.play();
           audioElement.onended = () => {
             if (thisSong && thisSong.audio.length < 4) {
@@ -113,7 +113,7 @@ const startNewGame = (): void => {
 
           } else if (thisGuess === correctAnswer?.toLowerCase()) {
 
-              audioElement.src = "./src/audio/soundEffects/certifiedBadass.mp3";
+              audioElement.src = "./public/audio/soundEffects/certifiedBadass.mp3";
               audioElement.play();
               audioElement.onended = () => {
                 if (thisSong && thisSong.audio.length > 4) {
@@ -137,7 +137,7 @@ const startNewGame = (): void => {
 
 
             } else if (thisGuess !== correctAnswer && (thisAttempt = 4)) {
-                audioElement.src = "./src/audio/soundEffects/youSuck.mp3";
+                audioElement.src = "./public/audio/soundEffects/youSuck.mp3";
                 audioElement.play();
                 audioElement.onended = () => {
                   if (thisSong && thisSong.audio.length > 4) {

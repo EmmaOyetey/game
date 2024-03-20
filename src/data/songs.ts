@@ -11,10 +11,10 @@ export const songArray : songInfo[] = [
       genre: ["French Indie", "Rock", "R&B", "pop",],
       playlist: ["waiheke", "oyetey", "today"],
       audio: ["./src/audio/destinysChild/destinyC-clip1.mp3", 
-      "./src/audio/destinysChild/destinyC-clip2.mp3",
-      "./src/audio/destinysChild/destinyC-clip3.mp3",
-      "./src/audio/destinysChild/destinyC-clip4.mp3",
-      "./src/audio/destinysChild/destinyC-fullsong.mp3"
+      "./public/audio/destinysChild/destinyC-clip2.mp3",
+      "./public/audio/destinysChild/destinyC-clip3.mp3",
+      "./pubic/audio/destinysChild/destinyC-clip4.mp3",
+      "./public/audio/destinysChild/destinyC-fullsong.mp3"
    ]
    },
    {  id: 1,
@@ -26,10 +26,10 @@ export const songArray : songInfo[] = [
       genre: ["pop","R&B",],
       playlist: ["waiheke", "oyetey", "today"],
       audio: ["./src/audio/mariahCarey/mariah-clip1.mp3", 
-      "./src/audio/mariahCarey/mariah-clip2.mp3",
-      "./src/audio/mariahCarey/mariah-clip3.mp3",
-      "./src/audio/mariahCarey/mariah-clip4.mp3",
-      "./src/audio/mariahCarey/mariah-fullsong.mp3"
+      "./public/audio/mariahCarey/mariah-clip2.mp3",
+      "./public/audio/mariahCarey/mariah-clip3.mp3",
+      "./public/audio/mariahCarey/mariah-clip4.mp3",
+      "./public/audio/mariahCarey/mariah-fullsong.mp3"
    ]
    },
    {  id: 2,
@@ -41,10 +41,10 @@ export const songArray : songInfo[] = [
       genre: ["dance","electronic",],
       playlist: ["waiheke", "oyetey", "today"],
       audio: ["./src/audio/prodigy/prodigy-clip1.mp3", 
-      "./src/audio/prodigy/prodigy-clip2.mp3",
-      "./src/audio/prodigy/prodigy-clip3.mp3",
-      "./src/audio/prodigy/prodigy-clip4.mp3",
-      "./src/audio/prodigy/prodigy-fullsong.mp3"
+      "./public/audio/prodigy/prodigy-clip2.mp3",
+      "./public/audio/prodigy/prodigy-clip3.mp3",
+      "./public/audio/prodigy/prodigy-clip4.mp3",
+      "./public/audio/prodigy/prodigy-fullsong.mp3"
    ]
    },
    {  id: 3,
@@ -56,10 +56,10 @@ export const songArray : songInfo[] = [
       genre: ["pop",],
       playlist: ["waiheke", "oyetey", "today"],
       audio: ["./src/audio/madonna/madonna-clip1.mp3", 
-      "./src/audio/madonna/madonna-clip1.mp3",
-      "./src/audio/madonna/madonna-clip2.mp3",
-      "./src/audio/madonna/madonna-clip3.mp3",
-      "./src/audio/madonna/madonna-fullsong.mp3"
+      "./public/audio/madonna/madonna-clip1.mp3",
+      "./public/audio/madonna/madonna-clip2.mp3",
+      "./public/audio/madonna/madonna-clip3.mp3",
+      "./public/audio/madonna/madonna-fullsong.mp3"
    ]
    },
 
