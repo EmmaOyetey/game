@@ -10,11 +10,11 @@ export const songArray : songInfo[] = [
       releaseDate : "2001",
       genre: ["French Indie", "Rock", "R&B", "pop",],
       playlist: ["waiheke", "oyetey", "today"],
-      audio: ["./src/audio/destinysChild/destinyC-clip1.mp3", 
-      "./public/audio/destinysChild/destinyC-clip2.mp3",
-      "./public/audio/destinysChild/destinyC-clip3.mp3",
-      "./pubic/audio/destinysChild/destinyC-clip4.mp3",
-      "./public/audio/destinysChild/destinyC-fullsong.mp3"
+      audio: ["./audio/destinysChild/destinyC-clip1.mp3", 
+      "./audio/destinysChild/destinyC-clip2.mp3",
+      "./audio/destinysChild/destinyC-clip3.mp3",
+      "./audio/destinysChild/destinyC-clip4.mp3",
+      "./audio/destinysChild/destinyC-fullsong.mp3"
    ]
    },
    {  id: 1,
@@ -25,11 +25,11 @@ export const songArray : songInfo[] = [
       releaseDate : "1995",
       genre: ["pop","R&B",],
       playlist: ["waiheke", "oyetey", "today"],
-      audio: ["./src/audio/mariahCarey/mariah-clip1.mp3", 
-      "./public/audio/mariahCarey/mariah-clip2.mp3",
-      "./public/audio/mariahCarey/mariah-clip3.mp3",
-      "./public/audio/mariahCarey/mariah-clip4.mp3",
-      "./public/audio/mariahCarey/mariah-fullsong.mp3"
+      audio: ["./audio/mariahCarey/mariah-clip1.mp3", 
+      "./audio/mariahCarey/mariah-clip2.mp3",
+      "./audio/mariahCarey/mariah-clip3.mp3",
+      "./audio/mariahCarey/mariah-clip4.mp3",
+      "./audio/mariahCarey/mariah-fullsong.mp3"
    ]
    },
    {  id: 2,
@@ -40,11 +40,11 @@ export const songArray : songInfo[] = [
       releaseDate : "1996",
       genre: ["dance","electronic",],
       playlist: ["waiheke", "oyetey", "today"],
-      audio: ["./src/audio/prodigy/prodigy-clip1.mp3", 
-      "./public/audio/prodigy/prodigy-clip2.mp3",
-      "./public/audio/prodigy/prodigy-clip3.mp3",
-      "./public/audio/prodigy/prodigy-clip4.mp3",
-      "./public/audio/prodigy/prodigy-fullsong.mp3"
+      audio: ["./audio/prodigy/prodigy-clip1.mp3", 
+      "./audio/prodigy/prodigy-clip2.mp3",
+      "./audio/prodigy/prodigy-clip3.mp3",
+      "./audio/prodigy/prodigy-clip4.mp3",
+      "./audio/prodigy/prodigy-fullsong.mp3"
    ]
    },
    {  id: 3,
@@ -55,11 +55,11 @@ export const songArray : songInfo[] = [
       releaseDate : "1989",
       genre: ["pop",],
       playlist: ["waiheke", "oyetey", "today"],
-      audio: ["./src/audio/madonna/madonna-clip1.mp3", 
-      "./public/audio/madonna/madonna-clip1.mp3",
-      "./public/audio/madonna/madonna-clip2.mp3",
-      "./public/audio/madonna/madonna-clip3.mp3",
-      "./public/audio/madonna/madonna-fullsong.mp3"
+      audio: ["./audio/madonna/madonna-clip1.mp3", 
+      "./audio/madonna/madonna-clip1.mp3",
+      "./audio/madonna/madonna-clip2.mp3",
+      "./audio/madonna/madonna-clip3.mp3",
+      "./audio/madonna/madonna-fullsong.mp3"
    ]
    },
 
