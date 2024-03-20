@@ -81,7 +81,7 @@ export const songArray : songInfo[] = [
    songForToday: true,
    albumName: "Like a Prayer",
    songTitle: "Like a Prayer",
-   artist : "Madonna",
+   artist : "madonna",
    releaseDate : "1989",
    genre: ["pop",],
    playlist: ["waiheke", "oyetey", "today"],

@@ -139,18 +139,6 @@
     background-color: red;
   }
 }
-.output-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: grey;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1em;
-  font-size: 1em;
-  font-weight: 500;
-}
-
 .controlButtons {
   display: flex;
   flex-direction: row;

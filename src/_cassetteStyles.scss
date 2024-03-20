@@ -2,118 +2,116 @@
     max-width: 325px;
     min-width: 300px;
     max-height: auto;
-    margin: 0;
-    
+    margin: 0; 
     text-align: center;
     display: flex;
     flex-direction: column ;
- 
   }
 
 
-  .inGameAudioAndFeedback-container{
-    display: none;
-    justify-content: space-between;
-    margin-left: 0.4em;
-    margin-right: 0.2em;
-    padding: 0.1em;
-    margin-bottom: 0.7em;
+.inGameAudioAndFeedback-container{
+  display: none;
+  justify-content: space-between;
+  margin-left: 0.4em;
+  margin-right: 0.2em;
+  padding: 0.1em;
+  margin-bottom: 0.7em;
     
-        .feedbackDisplay {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          text-align: right;
-          font-weight: 500;
-          font-size: 1.4em;
-          margin-left: 0.3em;
-        }
-
-        .feedbackDisplay p {
-          margin: 0; 
-          font-size: 1.4em;
-        }
-
-        .playButton {
-          justify-content: center;
-          border-radius: 50px;
-          border: 2px solid transparent;
-          background-color:rgb(244, 117, 20);
-          padding-left: 2em;
-          padding-right:2em;
-          font-size: 1em;
-          font-weight: 500;
-          font-family: inherit;
-          animation: pulse 5s infinite alternate; 
-          cursor: pointer;
-          transition: border-color 0.25s;  
-        }
-  }
-
-  .guessInput-Container {
-    display: none;
-    flex-direction: column;
-    margin-top: em;
-
-          label {
-              margin-bottom: 0.5em;
-              font-weight: bold;
-              font-size: 1.4em;
-              color: black;
-          }
-      
-          input[type="text"] {
-            border-radius: 8px;
-            border: 2px solid transparent;
-            padding-top: 0.4em;
-            padding-bottom: 1em;
-            font-size: 1em;
-            font-weight: 500;
-            font-family: inherit;
-            background-color:black;
-            color: white;
-            cursor: pointer;
-            transition: border-color 0.25s;
-            margin-bottom: 0.9em;
-            text-align: center;
-          }
-
-          .submitGuessButton {
-            border-radius: 8px;
-            border: 2px solid transparent;
-            padding-top: 0.2em;
-            padding-bottom: 0.3em;
-            width: 100%;
-            font-size: 1.2em;
-            font-weight: 500;
-            font-family: inherit;
-            background-color:black;
-            color: white;
-            cursor: pointer;
-            transition: border-color 0.25s;
-            margin-bottom: 0.4em;
-          
-              &:hover {
-              border-color: rgb(88, 63, 63);
-              }
-          }
-
-    .image-container-winner {
+    .feedbackDisplay {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: flex-end;
-      font-size: 2em;
+      justify-content: flex-end;
+      text-align: right;
       font-weight: 500;
+      font-size: 1.4em;
+      margin-left: 0.3em;
+    }
+
+    .feedbackDisplay p {
+      margin: 0; 
+      font-size: 1.4em;
+    }
+
+    .playButton {
+      justify-content: center;
+      border-radius: 50px;
+      border: 2px solid transparent;
+      background-color:rgb(244, 117, 20);
+      padding-left: 2em;
+      padding-right:2em;
+      font-size: 1em;
+      font-weight: 500;
+      font-family: inherit;
+      animation: pulse 5s infinite alternate; 
+      cursor: pointer;
+      transition: border-color 0.25s;  
+    }
+}
+
+.guessInput-Container {
+display: none;
+flex-direction: column;
+margin-top: em;
+
+  label {
       margin-bottom: 0.5em;
-      border-radius:8px;
-      max-width: 100px;
-      max-height: 50px;
-      background-color: orange;
-      animation: flasBackground 1s infinite alternative;
+      font-weight: bold;
+      font-size: 1.4em;
+      color: black;
+  }
+
+  input[type="text"] {
+    border-radius: 8px;
+    border: 2px solid transparent;
+    padding-top: 0.4em;
+    padding-bottom: 1em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color:black;
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin-bottom: 0.9em;
+    text-align: center;
+  }
+
+  .submitGuessButton {
+    border-radius: 8px;
+    border: 2px solid transparent;
+    padding-top: 0.2em;
+    padding-bottom: 0.3em;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color:black;
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin-bottom: 0.4em;
+
+      &:hover {
+      border-color: rgb(88, 63, 63);
+      }
+  }
+
+  .image-container-winner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    border-radius:8px;
+    max-width: 100px;
+    max-height: 50px;
+    background-color: orange;
+    animation: flasBackground 1s infinite alternative;
 
     } 
-  }
+}
 
   .gameOutcomeWinner , .gameOutcomeLoser {
     display: none;

@@ -44,6 +44,7 @@
   width: 190px;
   height: auto;
 }
+
 .intro {
   font-size: 1.4em;
   text-align: center;
@@ -51,7 +52,6 @@
   margin: 0;
   margin-bottom: 0.4em;
 }
-
 
 .image-container {
   background-image: url("/images/favourite\ cassette\ full\ size.jpg"), 
@@ -88,7 +88,6 @@
   animation: pulse 4s infinite alternate; /* Apply the pulse animation */
 }
 
-
 @keyframes pulse {
   0% {
     transform: scale(0.9);
@@ -96,4 +95,11 @@
   100% {
     transform: scale(1.1);
   }
+}
+
+
+@media screen and (min-width: 768px) {
+
+
+
 }
