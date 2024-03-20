@@ -62,7 +62,8 @@ const handleNewGame = (): void => {
 
 const stopAudio = (): void => {
   audioElement.pause(); 
-  audioElement.src = ""; };
+  audioElement.src = ""; 
+};
 
 const startNewGame = (): void => {
   thisAttempt = 0;

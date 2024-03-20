@@ -6,7 +6,7 @@ export const songArray : songInfo[] = [
       songForToday: true,
       albumName: "Survivor",
       songTitle: "Survivor",
-      artist : "destiny's child",
+      artist : "destinys child",
       releaseDate : "2001",
       genre: ["French Indie", "Rock", "R&B", "pop",],
       playlist: ["waiheke", "oyetey", "today"],
