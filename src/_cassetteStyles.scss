@@ -16,6 +16,7 @@
   margin-right: 0.2em;
   padding: 0.1em;
   margin-bottom: 0.7em;
+  max-height: em;
     
     .feedbackDisplay {
       display: flex;
@@ -25,11 +26,6 @@
       font-weight: 500;
       font-size: 1.4em;
       margin-left: 0.3em;
-    }
-
-    .feedbackDisplay p {
-      margin: 0; 
-      font-size: 1.4em;
     }
 
     .playButton {
@@ -49,9 +45,9 @@
 }
 
 .guessInput-Container {
-display: none;
-flex-direction: column;
-margin-top: em;
+      display: none;
+      flex-direction: column;
+      margin-top: em;
 
   label {
       margin-bottom: 0.5em;

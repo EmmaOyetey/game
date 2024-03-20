@@ -28,6 +28,7 @@
   margin-right: 0.2em;
   padding: 0.1em;
   margin-bottom: 0.7em;
+  max-height: em;
 }
 .inGameAudioAndFeedback-container .feedbackDisplay {
   display: flex;
@@ -37,10 +38,6 @@
   font-weight: 500;
   font-size: 1.4em;
   margin-left: 0.3em;
-}
-.inGameAudioAndFeedback-container .feedbackDisplay p {
-  margin: 0;
-  font-size: 1.4em;
 }
 .inGameAudioAndFeedback-container .playButton {
   justify-content: center;
