@@ -1,7 +1,7 @@
 import "./_style.scss";
 import { songArray } from "./data/songs";
 import { songInfo } from "./data/songTypes";
-
+//import {soundEffectArray} from "./data/soundEffects";
 
 const startNewGameButton =
   document.querySelector<HTMLButtonElement>(".newGameButton");
@@ -55,6 +55,9 @@ let thisSong: songInfo | undefined;
 let thisAttempt: number = 0;
 const audioElement = document.createElement("audio");
 audioElement.className = "audio";
+//const winSoundEffect  = soundEffectArray.find(effect => effect.soundeffectName === "win")
+//const loseSoundEffect = soundEffectArray.find(effect => effect.soundeffectName === "lose")
+//const wrongGuessEffect = soundEffectArray.find(effect => effect.soundeffectName === "wrongGuess")
 
 const handleNewGame = (): void => {
   window.location.reload();
@@ -95,10 +98,10 @@ const startNewGame = (): void => {
 
         if (thisGuess !== correctAnswer && thisAttempt < 4) {
 
-          audioElement.src = "./src/soundEffects/fail.mp3";
-          audioElement.play();
-          audioElement.onended = () => {
-            if (thisSong && thisSong.audio.length < 4) {
+        audioElement.src = "./src/soundEffects/fail.mp3"; 
+        audioElement.play();
+        audioElement.onended = () => {
+          if (thisSong && thisSong.audio.length < 4) {
               audioElement.src = thisSong.audio[thisAttempt]; 
               audioElement.play(); 
             }
