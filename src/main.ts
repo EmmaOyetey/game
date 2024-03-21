@@ -79,7 +79,6 @@ const startNewGame = (): void => {
       if (thisSong) {
         audioElement.src = thisSong.audio[thisAttempt];
         audioElement.play();
-        console.log("i'm playing a song!" + thisSong.audio[thisAttempt]);
         } else {
           throw new Error("no song selected");
         }
@@ -96,7 +95,7 @@ const startNewGame = (): void => {
 
         if (thisGuess !== correctAnswer && thisAttempt < 4) {
 
-          audioElement.src = "./public/audio/soundEffects/fail.mp3";
+          audioElement.src = "./src/soundEffects/fail.mp3";
           audioElement.play();
           audioElement.onended = () => {
             if (thisSong && thisSong.audio.length < 4) {
@@ -113,7 +112,7 @@ const startNewGame = (): void => {
 
           } else if (thisGuess === correctAnswer?.toLowerCase()) {
 
-              audioElement.src = "./public/audio/soundEffects/certifiedBadass.mp3";
+              audioElement.src = "./src/soundEffects/certifiedBadass.mp3";
               audioElement.play();
               audioElement.onended = () => {
                 if (thisSong && thisSong.audio.length > 4) {
@@ -137,7 +136,7 @@ const startNewGame = (): void => {
 
 
             } else if (thisGuess !== correctAnswer && (thisAttempt = 4)) {
-                audioElement.src = "./public/audio/soundEffects/youSuck.mp3";
+                audioElement.src = "./src/soundEffects/youSuck.mp3";
                 audioElement.play();
                 audioElement.onended = () => {
                   if (thisSong && thisSong.audio.length > 4) {
