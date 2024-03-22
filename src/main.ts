@@ -1,6 +1,7 @@
 import "./_style.scss";
 import { songArray } from "./data/songs";
 import { songInfo } from "./data/songTypes";
+import certifiedBadAss from "./soundEffects/certifiedBadass.mp3";
 //import {soundEffectArray} from "./data/soundEffects";
 
 const startNewGameButton =
@@ -115,7 +116,7 @@ const startNewGame = (): void => {
 
           } else if (thisGuess === correctAnswer?.toLowerCase()) {
 
-              audioElement.src = "./src/soundEffects/certifiedBadass.mp3";
+              audioElement.src = certifiedBadAss;
               audioElement.play();
               audioElement.onended = () => {
                 if (thisSong && thisSong.audio.length > 4) {
